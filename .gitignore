@@ -1,0 +1,6 @@
+.env
+test.py
+GeneratedProjects/
+venv/
+.vscode/
+__pycache__/
