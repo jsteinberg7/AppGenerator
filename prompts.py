@@ -59,3 +59,22 @@ def generate_initial_prompt(platform, user_prompt):
                 python3 main.py
                 ---
                 """
+def code_review_prompt(file_content): # TODO: need to make this prompt much better, too vague
+
+   return f"""
+As an expert code reviewer, project manager, and UI/UX expert, please review the attached Python code and provide comprehensive feedback:
+
+{file_content}
+
+From the code reviewer perspective, implement new ways for improving the code structure, readability, and adherence to best practices.
+
+From the project manager perspective, implement ways to make the code more maintainable and scalable in the long-term.
+
+From the UI expert perspective, implement ways to enhance the user interface and user experience.
+
+Return the new ENTIRE python script with ALL the code necessary for it to run automatically. Include comments of what was changed and tag these comments as (review 1) 
+
+Everything that is returned is going straight into a python file, so make sure any non code is commented and handled correctly. Do not include ``` 
+
+ """
+   
